@@ -1,0 +1,90 @@
+/* Stile generale della navbar */
+.navbar {
+  background-color: #333; /* Colore di sfondo */
+  overflow: hidden; /* Assicurati che gli elementi della navbar non fuoriescano */
+  position: sticky; /* La navbar resta visibile quando si scorre */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Stile per il contenitore della navbar */
+.navbar-container {
+  display: flex; /* Usa il flexbox per allineare gli elementi orizzontalmente */
+  justify-content: space-between; /* Distanza tra i diversi gruppi di elementi */
+  align-items: center; /* Allinea gli elementi verticalmente */
+  padding: 10px 20px; /* Padding interno per dare spazio */
+}
+
+/* Logo nella navbar */
+.navbar-logo {
+  font-size: 24px; /* Impostazione della dimensione del logo */
+  color: #fff; /* Colore del testo del logo */
+  font-weight: bold; /* Logo in grassetto */
+  text-transform: uppercase; /* Per rendere il logo in maiuscolo */
+  text-decoration: none; /* Rimuove la sottolineatura */
+}
+
+/* Links della navbar */
+.navbar-links {
+  display: flex; /* Disporre i link orizzontalmente */
+  list-style: none; /* Rimuove i pallini dei list-item */
+  margin: 0; /* Rimuove i margini */
+  padding: 0; /* Rimuove il padding */
+}
+
+/* Stile per ciascun link */
+.navbar-links li {
+  margin: 0 15px; /* Distanza tra i link */
+}
+
+/* Stile per i link */
+.navbar-links a {
+  color: #fff; /* Colore bianco per il testo */
+  font-size: 18px; /* Dimensione del font */
+  text-decoration: none; /* Rimuove la sottolineatura */
+  transition: color 0.3s ease; /* Transizione per il colore al passaggio del mouse */
+}
+
+.navbar-links a:hover {
+  color: #f39c12; /* Colore arancione quando il mouse passa sopra */
+}
+
+/* Stile del menu hamburger per mobile */
+.navbar-menu-icon {
+  display: none; /* Nascosto per dispositivi desktop */
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Media query per dispositivi mobili */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column; /* Imposta gli elementi in colonna sui dispositivi mobili */
+    align-items: flex-start; /* Allinea a sinistra gli elementi */
+  }
+
+  /* Nascondi i link di navigazione di default */
+  .navbar-links {
+    display: none;
+    width: 100%;
+    flex-direction: column; /* Aggiungi disposizione verticale per il menu */
+    padding: 10px 0;
+  }
+
+  /* Aggiungi margine ai link nel mobile */
+  .navbar-links li {
+    margin: 10px 0;
+  }
+
+  /* Mostra il menu quando cliccato */
+  .navbar-links.active {
+    display: flex;
+  }
+
+  /* Mostra l'icona del menu hamburger sui dispositivi mobili */
+  .navbar-menu-icon {
+    display: block;
+  }
+}
