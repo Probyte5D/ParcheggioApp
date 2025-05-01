@@ -1,0 +1,41 @@
+# Ignora i file di log
+*.log
+
+# Ignora i file temporanei di sistema
+.DS_Store
+Thumbs.db
+
+# Ignora cartelle di build di React
+/frontend/node_modules
+/frontend/build
+
+# Ignora cartelle di build di Spring Boot
+/backend/target
+/backend/.mvn
+/backend/mvnw
+/backend/mvnw.cmd
+
+# Ignora file di configurazione locali
+/.idea
+.vscode
+
+# Ignora file di configurazione di database locali
+*.sql
+*.db
+
+# Ignora file di configurazione di ambiente
+.env
+
+# Ignora file generati da IDE come IntelliJ o Eclipse
+*.iml
+*.ipr
+*.iws
+
+# Ignora file di dipendenze Maven
+/backend/.mvn
+/backend/.idea
+
+# Ignora file di log di sistema
+/logs
+
+.history
